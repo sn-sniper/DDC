@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/DDC/static/css/main.a3e0abd6.css",
+    "main.js": "/DDC/static/js/main.e05ca84e.js",
+    "static/js/453.59b580af.chunk.js": "/DDC/static/js/453.59b580af.chunk.js",
+    "static/media/gif.gif": "/DDC/static/media/gif.42d1337af2d5d3c72906.gif",
+    "static/media/Home.png": "/DDC/static/media/Home.1342cc1e1486a2417bee.png",
+    "static/media/vid_1.mp4": "/DDC/static/media/vid_1.1f476f9dbacd796ef8b4.mp4",
+    "static/media/CHAT_bg.svg": "/DDC/static/media/CHAT_bg.8cefe834add832b919cc.svg",
+    "static/media/2.svg": "/DDC/static/media/2.423c42ce846fe8fc94c5.svg",
+    "static/media/trans_bg_logo.png": "/DDC/static/media/trans_bg_logo.e9e1d296c4a2bcdbec64.png",
+    "static/media/1.svg": "/DDC/static/media/1.f744434ca175c0da9595.svg",
+    "index.html": "/DDC/index.html",
+    "main.a3e0abd6.css.map": "/DDC/static/css/main.a3e0abd6.css.map",
+    "main.e05ca84e.js.map": "/DDC/static/js/main.e05ca84e.js.map",
+    "453.59b580af.chunk.js.map": "/DDC/static/js/453.59b580af.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3e0abd6.css",
+    "static/js/main.e05ca84e.js"
+  ]
+}
