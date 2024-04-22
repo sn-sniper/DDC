@@ -47,16 +47,6 @@ function Homepage() {
                         <button className="btn">Live Chat</button>
                     </div>
                     <div className="footer__col">
-                        <h4>QUICK LINKS</h4>
-                        <ul className="footer__links">
-                            <li><a href="#">Browse Destinations</a></li>
-                            <li><a href="#">Special Offers & Packages</a></li>
-                            <li><a href="#">Room Types & Amenities</a></li>
-                            <li><a href="#">Customer Reviews & Ratings</a></li>
-                            <li><a href="#">Travel Tips & Guides</a></li>
-                        </ul>
-                    </div>
-                    <div className="footer__col">
                         <h4>OUR SERVICES</h4>
                         <ul className="footer__links">
                             <li><a href="#">Online appointments</a></li>
