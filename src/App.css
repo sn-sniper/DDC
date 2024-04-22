@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+.four {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+
+}
+
+
+.card {
+  padding: 4rem 5rem;
+  display: flex;
+  width: 40%;
+  background-color: #fffa;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  gap: 2rem;
+  /* align-items: center; */
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #004ca3;
+  font-weight: 700;
+}
+
+.card label {
+  font-size: 1.3rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.options div .opt-btn {
+  padding: 1rem;
+  width: 100%;
+  background-color: #4297f9;
+  color: white;
+  border-radius: .5rem;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  
+}
+.options div .opt-btn:hover{
+  border: #ccc;
+  transition: .2s ease-in-out;
+  box-shadow: #4297f9 0px 7px 29px 0px;
+}
+
+.questions {
+  background: url(./assets/1.svg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.before {
+  width: 100%;
+  height: 100vh;
+  background: url(./assets/2.svg) no-repeat;
+  background-position:left;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.before h1 {
+  text-align: center;
+
+  text-transform: uppercase;
+  font-size: 26px;
+  letter-spacing: 1px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 16px 0;
+  grid-gap: 22px;
+}
+
+.before h1:after,
+.before h1:before {
+  content: " ";
+  display: block;
+  border-bottom: 2px solid #ccc;
+  background-color: #f8f8f8;
+}
+
+
+.submit-btn {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  padding: 1.3em 3em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.submit-btn span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit-btn svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.submit-btn:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.submit-btn:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.submit-btn:hover span {
+  transform: translateX(6em);
+}
+
+.submit-btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+
+hr {
+  width: 100%;
+  transform: translateY(2rem);
+  height: 2px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #f5f5f5;
+}
+
+.toggle__switch {
+  --bg-toggle: #ffffff;
+  --bg-circle: #4297f9;
+  --w-toggle-switch: 150px;
+  --w-h-toggle-circle: 35px;
+  --pd-toggle-switch: .5rem;
+  height: 55px;
+  width: var(--w-toggle-switch);
+  background-color: var(--bg-toggle);
+  border-radius: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--pd-toggle-switch);
+  cursor: pointer;
+  transition: background-color 500ms;
+}
+
+
+.toggle__circle {
+  width: var(--w-h-toggle-circle);
+  height: var(--w-h-toggle-circle);
+  background-color: var(--bg-circle);
+  border-radius: 50%;
+  transition: margin 400ms ease-in-out, background-color 1000ms;
+}
+
+#checkbox:checked+.toggle .toggle__circle {
+  margin-left: calc(var(--w-toggle-switch) - (var(--pd-toggle-switch) * 2) - var(--w-h-toggle-circle));
+}
+
+#checkbox:checked+.toggle>.toggle__switch {
+  --bg-toggle: #4297f9;
+  --bg-circle: hsl(0, 0%, 96%);
+}
+
+
+.ForFemale {
+  display: none;
+}
+
+#checkbox:checked~.ForFemale {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .questions {
+    width: 100%;
+  }
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,311 @@
+// import React, { Component } from "react";
+// import { initializeApp } from "firebase/app";
+// import { getDatabase, ref, set } from "firebase/database";
+
+// var uuid = require("uuid");
+
+
+// const firebaseConfig = {
+//     apiKey: "AIzaSyAmZkeAM-Xw37ZwAe8PXOVRtk4L5G498to",
+//     authDomain: "survey-3526c.firebaseapp.com",
+//     databaseURL: "https://survey-3526c-default-rtdb.firebaseio.com",
+//     projectId: "survey-3526c",
+//     storageBucket: "survey-3526c.appspot.com",
+//     messagingSenderId: "236779884955",
+//     appId: "1:236779884955:web:9810d57addb0487676113e",
+//     measurementId: "G-JPTQ2481Q7"
+// };
+
+
+// const app = initializeApp(firebaseConfig);
+
+// const database = getDatabase(app);
+
+// function Survey(){
+
+//     infoSubmit(event) {
+//         event.preventDefault();
+//         var name = this.refs.name.value;
+//         var lname = this.refs.lname.value;
+//         var age = this.refs.age.value;
+//         this.setState({ Name: name, lName: lname, Age: age }, function () {
+//             console.log(this.state);
+//         });
+//     }
+
+//     surveySubmit(event) {
+//         event.preventDefault();
+//         const userRef = ref(database, `patients/${this.state.uid}`);
+//         set(userRef, {
+//             Name: this.state.Name,
+//             lName: this.state.lName,
+//             Age: this.state.Age,
+//             Answers: this.state.answers
+//         }).then(() => {
+//             this.setState({ isSubmited: true });
+//         }).catch(error => {
+//             console.error("Error writing document: ", error);
+//         });
+//     }
+
+
+//     answerSelected(event) {
+//         var answers = this.state.answers;
+//         if (event.target.name === 'ans1') {
+//             answers.ans1 = event.target.value;
+//         }
+//         if (event.target.name === 'ans2') {
+//             answers.ans2 = event.target.value;
+//         }
+//         if (event.target.name === 'ans3') {
+//             answers.ans3 = event.target.value;
+//         }
+//         if (event.target.name === 'ans4') {
+//             answers.ans4 = event.target.value;
+//         }
+//         if (event.target.name === 'ans5') {
+//             answers.ans5 = event.target.value;
+//         }
+//         if (event.target.name === 'ans6') {
+//             answers.ans6 = event.target.value;
+//         }
+//         if (event.target.name === 'ans7') {
+//             answers.ans7 = event.target.value;
+//         }
+//         if (event.target.name === 'ans8') {
+//             answers.ans8 = event.target.value;
+//         }
+//         if (event.target.name === 'ans9') {
+//             answers.ans9 = event.target.value;
+//         }
+//         if (event.target.name === 'ans10') {
+//             answers.ans10 = event.target.value;
+//         }
+//         if (event.target.name === 'ans11') {
+//             answers.ans11 = event.target.value;
+//         }
+//         if (event.target.name === 'ans12') {
+//             answers.ans12 = event.target.value;
+//         }
+//         if (event.target.name === 'ans13') {
+//             answers.ans13 = event.target.value;
+//         }
+
+//         this.setState({ answers: answers }, function () {
+//             console.log(this.state);
+//         });
+//     };
+
+//     constructor(props) {
+//         super(props);
+
+//         this.state = {
+//             uid: uuid.v1(),
+//             Name: '',
+//             lName: '',
+//             Age: '',
+//             answers: {
+//                 ans1: '',
+//                 ans2: '',
+//                 ans3: '',
+//                 ans4: '',
+//                 ans5: '',
+//                 ans6: '',
+//                 ans7: '',
+//                 ans8: '',
+//                 ans9: '',
+//                 ans10: '',
+//                 ans11: '',
+//                 ans12: '',
+//                 ans13: '',
+//             },
+//             isSubmited: false
+//         };
+//         this.infoSubmit = this.infoSubmit.bind(this);
+//         this.surveySubmit = this.surveySubmit.bind(this);
+//         this.answerSelected = this.answerSelected.bind(this);
+//     }
+//     render() {
+//         var name = '';
+//         var questions = '';
+
+//         if (this.state.Name === '' && this.state.isSubmited === false) {
+//             name = <div className="before">
+//                 <form className="form" onSubmit={this.infoSubmit}>
+//                     <div className="title">Welcome to our Survey</div>
+//                     <div className="subtitle">Please enter your:</div>
+
+//                     <div className="input-container ic1">
+//                         <input placeholder="" type="text" className="input" id="firstname" ref="name" />
+//                         <div className="cut"></div>
+//                         <label className="iLabel" htmlFor="firstname">First name</label>
+//                     </div>
+
+//                     <div className="input-container ic2">
+//                         <input placeholder="" type="text" className="input" id="lastname" ref="lname" />
+//                         <div className="cut"></div>
+//                         <label className="iLabel" htmlFor="lastname">Last name</label>
+//                     </div>
+//                     <div className="input-container ic2">
+//                         <input placeholder="" type="text" className="input" id="email" ref="age" />
+//                         <div className="cut cut-short"></div>
+//                         <label className="iLabel" htmlFor="email">Age</label>
+//                     </div>
+//                     <button className="submit" type="submit">Continue</button>
+//                 </form>
+//             </div>
+//         }
+//         else if (this.state.Name !== '' && this.state.isSubmited === false) {
+//             name = <div className="four">
+//                 <h1>Welcome <em>{this.state.Name}</em>!</h1>
+//                 <svg height="50" width="300" xmlns="http://www.w3.org/2000/svg">
+//                     <line x1="0" y1="10" x2="300" y2="10" />
+//                 </svg> 
+//                 <h2>
+//                     Please answer the questions bellow:
+//                 </h2>
+//             </div>
+//             questions = <div>
+                
+                // <form onSubmit={this.surveySubmit} className="questions">
+                //     <div className="card">
+                //         <label>
+                //             Do you have any heart problems?
+                //         </label><div className="options">
+                //             <input type="radio" name="ans1" value="Yes" onChange={this.answerSelected} />Yes
+                //             <input type="radio" name="ans1" value="No" onChange={this.answerSelected} />No</div>
+                //     </div>
+                //     <div className="card">
+                //         <label>
+                //             Are you hypertensive?
+                //         </label><div className="options">
+                //             <input type="radio" name="ans2" value="Yes" onChange={this.answerSelected} />Yes
+                //             <input type="radio" name="ans2" value="No" onChange={this.answerSelected} />No
+                //             </div>
+                //     </div>
+                //     <div className="card">
+                //         <label>
+                //             Do you have any bleeding disorder?
+                //         </label><div className="options">
+                //             <input type="radio" name="ans3" value="Yes" onChange={this.answerSelected} />Yes
+                //             <input type="radio" name="ans3" value="No" onChange={this.answerSelected} />No</div>
+                //     </div>
+                //     <div className="card">
+                //         <label>
+                //             Are you Diabetic?
+                //         </label><div className="options">
+                //             <input type="radio" name="ans4" value="Yes" onChange={this.answerSelected} />Yes
+                //             <input type="radio" name="ans4" value="No" onChange={this.answerSelected} />No</div>
+                //     </div>
+                //     <div className="card">
+                //         <label>
+                //             Are you Asthmatic?
+                //         </label><div className="options">
+                //             <input type="radio" name="ans5" value="Yes" onChange={this.answerSelected} />Yes
+                //             <input type="radio" name="ans5" value="No" onChange={this.answerSelected} />No</div>
+                //     </div>
+                //     <div className="card">
+                //         <label>
+                //             Do you have any theroid problems?
+                //         </label><div className="options">
+                //             <input type="radio" name="ans6" value="Yes" onChange={this.answerSelected} />Yes
+                //             <input type="radio" name="ans6" value="No" onChange={this.answerSelected} />No</div>
+                //     </div>
+                //     <div className="card">
+                //         <label>
+                //             Do you have any gastrointestinol problems?
+                //         </label><div className="options">
+                //             <input type="radio" name="ans7" value="Yes" onChange={this.answerSelected} />Yes
+                //             <input type="radio" name="ans7" value="No" onChange={this.answerSelected} />No</div>
+                //     </div>
+                //     <div className="card">
+                //         <label>
+                //             Are you Epileptic?
+                //         </label><div className="options">
+                //             <input type="radio" name="ans8" value="Yes" onChange={this.answerSelected} />Yes
+                //             <input type="radio" name="ans8" value="No" onChange={this.answerSelected} />No</div>
+                //     </div>
+                //     <div className="card">
+                //         <label>
+                //             Are you allergic to Penicillin or other drugs?
+                //         </label><div className="options">
+                //             <input type="radio" name="ans9" value="Yes" onChange={this.answerSelected} />Yes
+                //             <input type="radio" name="ans9" value="No" onChange={this.answerSelected} />No</div>
+                //     </div>
+                //     <div className="card">
+                //         <label>
+                //             Do you have hepatitis (liver diseases), yellow jaundice or had a positive test for Hepatitis?
+                //         </label><div className="options">
+                //             <input type="radio" name="ans10" value="Yes" onChange={this.answerSelected} />Yes
+                //             <input type="radio" name="ans10" value="No" onChange={this.answerSelected} />No</div>
+                //     </div>
+                //     <div className="card">
+                //         <label>
+                //             Did you have any operations?
+                //         </label><div className="options">
+                //             <input type="radio" name="ans11" value="Yes" onChange={this.answerSelected} />Yes
+                //             <input type="radio" name="ans11" value="No" onChange={this.answerSelected} />No</div>
+                //     </div>
+                //     <input type="checkbox" name="check-toggle" id="checkbox" hidden="hidden" />
+                //     <label htmlFor="checkbox" className="toggle">
+                //         M
+                //         <div className="toggle__switch">
+                //             <div className="toggle__circle"></div>
+                //         </div>
+                //         F
+                //     </label>
+                //     <div className="ForFemale">
+                //         <div className="card">
+                //             <label>
+                //                 Are you taking birth control pills or hormones?
+                //             </label><div className="options">
+                //                 <input type="radio" name="ans12" value="Yes" onChange={this.answerSelected} />Yes
+                //                 <input type="radio" name="ans12" value="No" onChange={this.answerSelected} />No</div>
+                //         </div>
+                //         <div className="card">
+                //             <label>
+                //                 Could you be pregnant?
+                //             </label><div className="options">
+                //                 <input type="radio" name="ans13" value="Yes" onChange={this.answerSelected} />Yes
+                //                 <input type="radio" name="ans13" value="No" onChange={this.answerSelected} />No</div>
+                //         </div>
+                //     </div>
+                //     <button type="submit">
+                //         <div className="svg-wrapper-1">
+                //             <div className="svg-wrapper">
+                //                 <svg
+                //                     xmlns="http://www.w3.org/2000/svg"
+                //                     viewBox="0 0 24 24"
+                //                     width="24"
+                //                     height="24"
+                //                 >
+                //                     <path fill="none" d="M0 0h24v24H0z"></path>
+                //                     <path
+                //                         fill="currentColor"
+                //                         d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                //                     ></path>
+                //                 </svg>
+                //             </div>
+                //         </div>
+                //         <span>Send</span>
+                //     </button>
+
+                // </form>
+//             </div>
+//         }
+//         else if (this.state.Name !== '' && this.state.isSubmited === true) {
+//             name = <div className="Finish">
+//                 <h1> Thank you for Submiting the form! Your response is sent sucessfuly.</h1>
+//             </div>
+//         }
+//         return (
+//             <div>
+//                 {name}
+//                 <br />
+//                 {questions}
+//             </div>
+//         )
+//     }
+// }
+
+// export default Survey;
