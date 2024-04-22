@@ -1,70 +1,82 @@
 .nav {
-    background-color: none;
-    position: absolute;
-    top: 0;
-    left: 37%;
+    background-color: #2f7eb7;
+    /* position: absolute; */
+    /* top: 0;
+    left: 37%; */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10%;
+    border-bottom: 1px solid white;
+    align-items: center;
 }
 
-.nav ul{
+.nav ul {
     display: flex;
     flex-direction: row;
     gap: 5rem;
     color: white;
     font-size: 1rem;
+    align-items: center;
+    transform: translateY(-.5rem);
     padding-top: 1rem;
 }
-.nav ul a{
+
+.nav img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.nav ul a {
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
 }
-.nav ul a:hover{
+
+.nav ul a:hover {
     text-decoration: underline;
     text-decoration-color: white;
     text-decoration-thickness: 1px;
     cursor: pointer;
 }
-.toChat{
-    transform: translate(10rem,40rem);
+
+.toChat {
     border: none;
     outline: none;
     padding: 1rem;
-    border-radius: 15rem;
+    /* border-radius: 15rem; */
     display: flex;
-    justify-content: space-around;
-    width: 300px;
-    height: 50px;
-    font-size: 1.2rem;  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
-.toChat span{
-    background-color: royalblue;
-    color: white;
-    border-radius: .5rem;
+.toChat b {
     font-size: 2rem;
+    margin-left: 2%;
 }
 
-.toSurvey{
-    transform: translate(40rem, -15rem);
-        border: none;
-        outline: none;
-        padding: 1rem;
-        border-radius: 15rem;
-        display: flex;
-        justify-content: space-around;
-        width: 300px;
-        height: 50px;
-        font-size: 1.2rem;
-        cursor: pointer;
+.toSurvey {
+    border: none;
+    outline: none;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-.toSurvey span {
-    background-color: royalblue;
-    color: white;
-    border-radius: .5rem;
+.toSurvey b {
     font-size: 2rem;
+    margin-left: 2%;
 }
+
 .footer {
     background-color: var(--text-dark);
 }
@@ -123,4 +135,62 @@
     font-size: 0.9rem;
     color: var(--text-light);
     text-align: center;
+}
+
+.res_nav {
+    background-color: #2f7eb7;
+    /* position: absolute; */
+    /* top: 0;
+    left: 37%; */
+    display: none;
+    width: 100%;
+    justify-content: center;
+    padding: 0 10%;
+    border-bottom: 1px solid white;
+    align-items: center;
+}
+
+.res_nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    color: white;
+    font-size: 1rem;
+    align-items: center;
+    transform: translateY(-.5rem);
+    padding-top: 1rem;
+}
+
+.res_nav ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.res_nav ul a:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 1px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .res_nav {
+        display: flex;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .toSurvey {
+        font-size: 1.2rem;
+        height: 75px;
+    }
+
+    .toChat {
+        height: 75px;
+        font-size: 1.2rem;
+    }
+
 }

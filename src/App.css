@@ -15,7 +15,7 @@
 
 
 .card {
-  padding: 4rem 5rem;
+  padding: 10% 5%;
   display: flex;
   width: 40%;
   background-color: #fffa;
@@ -235,4 +235,19 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 500px){
+  .questions{
+    padding-top: 20%;
+    align-items: start;
+
+  }
+  .card{
+    width: 100%;
+  }
+  .submit-btn{
+    width: 100%;
+    justify-content: center;
+  }
 }
