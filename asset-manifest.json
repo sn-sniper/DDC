@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/DDC/static/css/main.a3e0abd6.css",
-    "main.js": "/DDC/static/js/main.9d50bbf4.js",
+    "main.css": "/DDC/static/css/main.1c420108.css",
+    "main.js": "/DDC/static/js/main.2daf6f2c.js",
     "static/js/453.59b580af.chunk.js": "/DDC/static/js/453.59b580af.chunk.js",
     "static/media/gif.gif": "/DDC/static/media/gif.42d1337af2d5d3c72906.gif",
     "static/media/Home.png": "/DDC/static/media/Home.1342cc1e1486a2417bee.png",
@@ -10,13 +10,14 @@
     "static/media/2.svg": "/DDC/static/media/2.423c42ce846fe8fc94c5.svg",
     "static/media/trans_bg_logo.png": "/DDC/static/media/trans_bg_logo.e9e1d296c4a2bcdbec64.png",
     "static/media/1.svg": "/DDC/static/media/1.f744434ca175c0da9595.svg",
+    "static/media/t_w_logo.svg": "/DDC/static/media/t_w_logo.17ca06a398479bfb603ec626d87ca984.svg",
     "index.html": "/DDC/index.html",
-    "main.a3e0abd6.css.map": "/DDC/static/css/main.a3e0abd6.css.map",
-    "main.9d50bbf4.js.map": "/DDC/static/js/main.9d50bbf4.js.map",
+    "main.1c420108.css.map": "/DDC/static/css/main.1c420108.css.map",
+    "main.2daf6f2c.js.map": "/DDC/static/js/main.2daf6f2c.js.map",
     "453.59b580af.chunk.js.map": "/DDC/static/js/453.59b580af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a3e0abd6.css",
-    "static/js/main.9d50bbf4.js"
+    "static/css/main.1c420108.css",
+    "static/js/main.2daf6f2c.js"
   ]
 }
