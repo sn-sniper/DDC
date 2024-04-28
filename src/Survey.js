@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component} from "react";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set } from "firebase/database";
 import { v1 as uuidv1 } from "uuid";
@@ -16,6 +16,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
+
 
 
 
@@ -43,8 +44,9 @@ class Survey extends Component {
                 ans12: "",
                 ans13: ""
             },
-            isSubmitted: false
+            isSubmitted: false,
         };
+
 
         // Bind event handlers
         this.infoSubmit = this.infoSubmit.bind(this);
@@ -90,6 +92,16 @@ class Survey extends Component {
             }
         }), () => {
             console.log(this.state);
+            const clickedElement = event.target; 
+
+            clickedElement.style.backgroundColor = '#4297f9';
+            
+            const siblings = Array.from(clickedElement.parentElement.children)
+                .filter(element => element !== clickedElement);
+
+            siblings.forEach(sibling => {
+                sibling.style.backgroundColor = '#4297f9'; 
+            });
         });
     }
 

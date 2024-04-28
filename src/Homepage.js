@@ -11,10 +11,10 @@ import { useNavigate } from "react-router-dom";
 function Homepage() {
     const navigate = useNavigate()
     const goToSurvey=()=>{
-        navigate("/Survey");
+        navigate("/DDC/Survey");
     }
     const goToChat =()=>{
-        navigate("/Live-Chat");
+        navigate("/DDC/Live-Chat");
     }
     return (
 
@@ -25,14 +25,14 @@ function Homepage() {
                 <ul>
                     <Link exact to="/DDC/" className="Link">Home</Link>
 
-                    <Link to="/Survey" className="Link">Survey</Link>
+                    <Link to="/DDC/Survey" className="Link">Survey</Link>
                 </ul>
             </div>
             <div className="res_nav">
                 <ul>
                     <Link exact to="/DDC/" className="Link">Home</Link>
 
-                    <Link to="/Survey" className="Link">Survey</Link>
+                    <Link to="/DDC/Survey" className="Link">Survey</Link>
                 </ul>
             </div>
             <video src={vid_1} autoPlay muted loop />
@@ -65,8 +65,8 @@ function Homepage() {
                     <div className="footer__col">
                         <h4>CONTACT US</h4>
                         <ul className="footer__links">
-                            <li><a href="./contact.html">ha88806234@gmail.com</a></li>
-                            <li><a href="./contact.html">+961 70 659 877</a></li>
+                            <li><a href="">ha88806234@gmail.com</a></li>
+                            <li><a href="">+961 70 659 877</a></li>
                         </ul>
                     </div>
                 </div>

@@ -12,8 +12,8 @@ function App() {
     <BrowserRouter>
       <Routes>x
         <Route exact path="/DDC/" element={<Homepage />} />
-        <Route path="/Survey" element={<Survey />} />
-        <Route path="/Live-Chat" element={<ChatBox />} />
+        <Route path="/DDC/Survey" element={<Survey />} />
+        <Route path="/DDC/Live-Chat" element={<ChatBox />} />
 
       </Routes>
     </BrowserRouter>
